@@ -8,14 +8,27 @@ data/README.md,Data handling overview
 data/sources.md,Public-source retrieval and provenance
 data/checksums.csv,SHA-256 checksums of frozen source files
 data/manifests/dataset_audit.csv,Frozen dataset audit counts
-data/manifests/reference_verification_ledger.csv,Reference verification ledger
 docs/REPRODUCIBILITY.md,Reproduction and validation instructions
 docs/DATA_PROVENANCE.md,Dataset provenance and redistribution notes
 docs/EXPERIMENT_PROTOCOL.md,Frozen experimental protocol
 docs/FROZEN_RESULTS.md,Frozen-output inventory
 docs/LICENSE_AND_USAGE.md,License/provenance status and usage notes
-src/,Research pipeline source code
-scripts/validate_frozen_package.py,Public frozen-output validator
-scripts/regenerate_manuscript_artifacts.py,Manuscript-artifact regeneration helper
-results/frozen/,Aggregate frozen outputs supporting the manuscript
+src/data_pipeline.py,Molecular standardization feature generation and scientific-rule scores
+src/splits.py,Random scaffold and Butina split construction
+src/classical_models.py,Classical descriptor and fingerprint baselines
+src/graph_models.py,Graph descriptor fusion and AGRR models
+src/run_experiments.py,Primary frozen-protocol experiment orchestration
+src/external_comparators.py,External B3DB transfer comparators
+src/explanation_analysis.py,Descriptor-pathway attribution-stability analysis
+src/rule_failure_diagnostics.py,Independent train-only rule-failure diagnosis
+src/generate_artifacts.py,Primary table and figure generation source
+src/generate_review_figures.py,Review/final figure generation source
+src/generate_case_figure.py,Molecular audit-case figure source
+scripts/validate_frozen_package.py,Public frozen-output integrity validator
+scripts/regenerate_manuscript_artifacts.py,Artifact-regeneration entry helper
+results/frozen/main_metrics/,Frozen main aggregate metrics
+results/frozen/uncertainty/,Frozen calibration and attribution-stability summaries
+results/frozen/ablations/,Frozen gate and no-rule sensitivity summaries
+results/frozen/external_validation/,Frozen B3DB transfer comparison
+results/frozen/statistical_outputs/,Frozen paired and independent audit summaries
 tables/,Machine-readable manuscript table sources
