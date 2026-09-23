@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+pyyaml
+joblib
+requests
+rdkit
+xgboost
+torch
+torch-geometric

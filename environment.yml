@@ -1,0 +1,21 @@
+name: applicability-gated-molecular-ai
+channels:
+  - conda-forge
+  - pytorch
+  - pyg
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pyyaml
+  - joblib
+  - requests
+  - rdkit
+  - xgboost
+  - pytorch
+  - pyg
+  - pip

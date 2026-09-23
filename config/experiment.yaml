@@ -1,0 +1,93 @@
+project:
+  name: knowledge_guided_molecular_ai
+  seed: 2026
+  output_dir: experiments/results
+  cache_dir: data/cache
+
+runtime:
+  device: cpu
+  num_workers: 4
+  torch_threads: 8
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  split_dir: data/splits
+  esol_url: https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/delaney-processed.csv
+  bbbp_url: https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/BBBP.csv
+  lipophilicity_url: https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/Lipophilicity.csv
+  freesolv_url: https://raw.githubusercontent.com/MobleyLab/FreeSolv/master/database.txt
+
+splits:
+  train_fraction: 0.8
+  validation_fraction: 0.1
+  test_fraction: 0.1
+  split_types:
+    - random
+    - scaffold
+    - butina
+  seeds:
+    - 11
+    - 29
+    - 47
+    - 83
+    - 131
+  butina_cutoff: 0.6
+
+morgan:
+  radius: 2
+  n_bits: 2048
+
+models:
+  rf:
+    n_estimators: 300
+    max_depth: null
+    min_samples_leaf: 1
+  extra_trees:
+    n_estimators: 300
+  xgboost:
+    n_estimators: 500
+    max_depth: 6
+    learning_rate: 0.03
+    subsample: 0.8
+    colsample_bytree: 0.8
+  mlp:
+    hidden_dims:
+      - 256
+      - 128
+    dropout: 0.2
+    epochs: 120
+    batch_size: 64
+    patience: 20
+    learning_rate: 0.001
+  gnn:
+    hidden_dim: 128
+    layers: 3
+    dropout: 0.15
+    epochs: 100
+    batch_size: 64
+    patience: 15
+    learning_rate: 0.001
+  gated:
+    hidden_dim: 128
+    dropout: 0.15
+    epochs: 120
+    patience: 20
+    learning_rate: 0.001
+    sparse_lambda: 0.001
+    applicability_temperature: 0.2
+
+uncertainty:
+  ensemble_size: 5
+  coverage_levels:
+    - 0.8
+    - 0.9
+    - 0.95
+
+bootstrap:
+  n_resamples: 2000
+  confidence_level: 0.95
+
+explainability:
+  max_molecules_per_split: 64
+  fingerprint_repeats: 5

@@ -1,0 +1,21 @@
+path,role
+README.md,Repository overview and reproduction entry point
+CITATION.cff,Citation metadata
+requirements.txt,Pip dependency summary
+environment.yml,Conda environment summary
+config/experiment.yaml,Frozen experiment configuration
+data/README.md,Data handling overview
+data/sources.md,Public-source retrieval and provenance
+data/checksums.csv,SHA-256 checksums of frozen source files
+data/manifests/dataset_audit.csv,Frozen dataset audit counts
+data/manifests/reference_verification_ledger.csv,Reference verification ledger
+docs/REPRODUCIBILITY.md,Reproduction and validation instructions
+docs/DATA_PROVENANCE.md,Dataset provenance and redistribution notes
+docs/EXPERIMENT_PROTOCOL.md,Frozen experimental protocol
+docs/FROZEN_RESULTS.md,Frozen-output inventory
+docs/LICENSE_AND_USAGE.md,License/provenance status and usage notes
+src/,Research pipeline source code
+scripts/validate_frozen_package.py,Public frozen-output validator
+scripts/regenerate_manuscript_artifacts.py,Manuscript-artifact regeneration helper
+results/frozen/,Aggregate frozen outputs supporting the manuscript
+tables/,Machine-readable manuscript table sources

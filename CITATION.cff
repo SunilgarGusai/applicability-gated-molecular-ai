@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or frozen research outputs, please cite the associated manuscript."
+title: "Applicability-Gated Molecular AI"
+type: software
+authors:
+  - family-names: Gusai
+    given-names: Sunilgar L.
+    orcid: "https://orcid.org/0009-0004-0739-4812"
+  - family-names: Jadeja
+    given-names: Manoharsinh R.
+  - family-names: Kaneria
+    given-names: Vinodray J.
+repository-code: "https://github.com/SunilgarGusai/applicability-gated-molecular-ai"
+preferred-citation:
+  type: article
+  title: "Learning When to Trust Fallible Scientific Rules: Applicability-Gated Molecular Property Prediction under Chemical-Space Shift"
+  authors:
+    - family-names: Gusai
+      given-names: Sunilgar L.
+      orcid: "https://orcid.org/0009-0004-0739-4812"
+    - family-names: Jadeja
+      given-names: Manoharsinh R.
+    - family-names: Kaneria
+      given-names: Vinodray J.
+  notes: "Manuscript submitted to Artificial Intelligence and Applications. Bibliographic publication metadata will be added after publication."
