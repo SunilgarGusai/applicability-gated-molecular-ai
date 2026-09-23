@@ -1,21 +1,19 @@
-name: applicability-gated-molecular-ai
+name: agrr-molecular-ai
 channels:
   - conda-forge
   - pytorch
   - pyg
+  - defaults
 dependencies:
-  - python=3.11
-  - numpy
-  - pandas
-  - scipy
-  - scikit-learn
-  - matplotlib
-  - seaborn
+  - python=3.13
+  - numpy=2.3
+  - pandas=2.2
+  - scipy=1.17
+  - scikit-learn=1.8
+  - matplotlib=3.10
+  - rdkit=2025.09
+  - pytorch=2.10
+  - pytorch-geometric=2.8
+  - xgboost=3.1
   - pyyaml
-  - joblib
-  - requests
-  - rdkit
-  - xgboost
-  - pytorch
-  - pyg
   - pip

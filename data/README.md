@@ -1,11 +1,14 @@
-# Data
+# Data handling
 
-This directory contains provenance, source manifests, checksums, and audit summaries for the public third-party datasets used by the frozen study.
+This repository does **not** redistribute the third-party raw molecular benchmark files used in the study. The exact expected filenames, source citations, retrieval locations, and SHA-256 hashes of the copies used for the frozen study are documented in `sources.md` and `checksums.csv`.
 
-## Important redistribution note
+After obtaining the source files under their original terms, place them under `data/raw/` with these filenames:
 
-Raw ESOL, BBBP, Lipophilicity, FreeSolv, and B3DB molecular tables are **not redistributed here**. Retrieve them from the documented public sources and verify the frozen-file checksums where the same source snapshot is still available.
+- `delaney-processed.csv`
+- `BBBP.csv`
+- `Lipophilicity.csv`
+- `FreeSolv_database.txt`
 
-The manuscript-supporting public repository exposes aggregate frozen outputs but intentionally excludes third-party per-molecule molecular records.
+The B3DB transfer corpus is loaded through `qc-B3DB==1.1.1` by the frozen pipeline. `src/data_pipeline.py` performs deterministic molecular cleanup, largest-fragment selection, uncharging where possible, canonicalization, duplicate handling, feature generation, and rule-score generation.
 
-See [`sources.md`](sources.md), [`checksums.csv`](checksums.csv), and [`../docs/DATA_PROVENANCE.md`](../docs/DATA_PROVENANCE.md).
+`manifests/dataset_audit.csv` records the frozen dataset audit counts. Raw and per-molecule processed files are intentionally excluded from this public repository pending their independent source terms; this repository instead preserves the methods, aggregate frozen outputs, and source-file checksums used for manuscript traceability.

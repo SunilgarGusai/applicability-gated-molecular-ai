@@ -1,0 +1,6 @@
+dataset,raw_rows,missing_or_invalid,duplicate_groups,conflicting_groups,final_rows,task,role
+ESOL,1128,0,11,0,1117,regression,Primary rule task
+BBBP,2050,11,68,11,1955,classification,Primary rule task
+Lipophilicity,4200,0,0,0,4200,regression,No-rule sensitivity
+FreeSolv,642,0,0,0,642,regression,No-rule sensitivity
+B3DB_external,7807,2,3,0,7802,classification,De-overlapped BBB transfer validation
