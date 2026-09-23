@@ -1,0 +1,34 @@
+split,model,mean,std,display
+butina,ExtraTrees_desc,0.7340602179901878,0.10293582949204855,Extra Trees descriptors
+butina,Fixed_rule,1.0566096795587006,0.05948592528873472,Fixed rule
+butina,GCN,0.9431290998594136,0.07936889960560173,GCN
+butina,Gated_no_applicability_penalty,0.6827960723004702,0.03684414578039267,"Gated, no applicability penalty"
+butina,Graph_descriptor_fusion,0.6799001856783385,0.05637198519699985,Graph--descriptor fusion
+butina,Proposed_AGRR,0.6749250184081438,0.057652441240118056,Proposed AGRR
+butina,RF_Morgan,1.7268351289875983,0.13211323303320183,RF Morgan
+butina,RF_desc,0.7684409157731894,0.11656918243312323,RF descriptors
+butina,Rule_residual_no_gate,0.6738637858997338,0.056640025546296185,"Residual, no gate"
+butina,Shuffled_rule_control,0.6886438446066653,0.06301020334977726,Shuffled-rule control
+butina,XGBoost_desc,0.7627291507507155,0.107967826924285,XGBoost descriptors
+random,ExtraTrees_desc,0.6147558947078393,0.040483297258640985,Extra Trees descriptors
+random,Fixed_rule,1.0163863814513676,0.03133924249503577,Fixed rule
+random,GCN,0.6656620553088463,0.05317798028216606,GCN
+random,Gated_no_applicability_penalty,0.6011141067502681,0.04016519917689325,"Gated, no applicability penalty"
+random,Graph_descriptor_fusion,0.5846991528251243,0.048994975709295285,Graph--descriptor fusion
+random,Proposed_AGRR,0.5783632842656203,0.04345630508065478,Proposed AGRR
+random,RF_Morgan,1.2723386953519964,0.03467693880024802,RF Morgan
+random,RF_desc,0.6439041662750421,0.049883796766543094,RF descriptors
+random,Rule_residual_no_gate,0.5824057750165212,0.060683849185026006,"Residual, no gate"
+random,Shuffled_rule_control,0.584053332447503,0.047093581810007716,Shuffled-rule control
+random,XGBoost_desc,0.6378426430857346,0.04232437485049797,XGBoost descriptors
+scaffold,ExtraTrees_desc,0.7938702159086064,0.04939340746485223,Extra Trees descriptors
+scaffold,Fixed_rule,1.1205965185580435,0.03460573583058706,Fixed rule
+scaffold,GCN,1.0121138316408713,0.15678540261886337,GCN
+scaffold,Gated_no_applicability_penalty,0.7747779147582298,0.03871964598970308,"Gated, no applicability penalty"
+scaffold,Graph_descriptor_fusion,0.803944790222728,0.09294919974852416,Graph--descriptor fusion
+scaffold,Proposed_AGRR,0.7372314252936619,0.05377755297082071,Proposed AGRR
+scaffold,RF_Morgan,1.3530843496456235,0.06635486139446298,RF Morgan
+scaffold,RF_desc,0.8091601514585121,0.04842662468648571,RF descriptors
+scaffold,Rule_residual_no_gate,0.7382181465689822,0.060897592628289914,"Residual, no gate"
+scaffold,Shuffled_rule_control,0.7767395790700478,0.07561123470100796,Shuffled-rule control
+scaffold,XGBoost_desc,0.8027457899054257,0.05788214197790743,XGBoost descriptors
