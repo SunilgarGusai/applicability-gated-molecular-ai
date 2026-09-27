@@ -48,33 +48,32 @@ These are part of the scientific conclusion, not exceptions hidden from it.
 
 ## Method at a glance
 
-For a molecule \(x\), AGRR keeps the scientific rule prediction \(r(x)\) explicit. Declared applicability \(a(x)\) and learned trust \(t(x)\) determine the realized rule reliance \(\rho(x)\), while a graph-descriptor expert \(n_\theta(x)\) supplies the learned prediction:
+For a molecule `x`, AGRR keeps the scientific-rule prediction `r(x)` explicit. Declared applicability `a(x)` and learned trust `t(x)` determine the realized rule reliance `ρ(x)`, while a graph-descriptor expert `nθ(x)` supplies the learned prediction.
 
-\[
-\hat y=(1-\rho)n_\theta(x)+\rho r(x).
-\]
+<p align="center"><strong>ŷ = (1 − ρ) nθ(x) + ρ r(x)</strong></p>
 
 The rule-failure model is **separate** from the predictive path: it estimates likely rule error for retrospective auditing and selective analysis, but does not modify the frozen AGRR prediction.
 
 ```mermaid
 flowchart LR
-    A[Molecule] --> B[Graph + molecular descriptors]
-    A --> C[Explicit scientific rule]
+    A["Molecule"] --> B["Graph + molecular descriptors"]
+    A --> C["Explicit scientific rule"]
 
-    B --> D[Neural molecular expert]
-    B --> E[Empirical applicability a(x)]
-    B --> F[Learned trust t(x)]
+    B --> D["Neural molecular expert"]
+    B --> E["Empirical applicability a(x)"]
+    B --> F["Learned trust t(x)"]
 
-    E --> G[Rule reliance rho = a × t]
+    E --> G["Rule reliance: rho = a × t"]
     F --> G
-    C --> H[Rule-aware mixture]
+    C --> H["Rule-aware mixture"]
     D --> H
     G --> H
-    H --> I[Final prediction]
-    H --> J[Ensemble uncertainty]
 
-    B --> K[Independent rule-failure model]
-    K --> L[Failure score / selective rule audit]
+    H --> I["Final prediction"]
+    H --> J["Ensemble uncertainty"]
+
+    B --> K["Independent rule-failure model"]
+    K --> L["Failure score / selective rule audit"]
 
     style C fill:#fff3e6,stroke:#d97706
     style G fill:#e8f4ff,stroke:#2684ff
@@ -158,7 +157,7 @@ The repository environment is specified in [`environment.yml`](environment.yml) 
 
 ```bash
 conda env create -f environment.yml
-conda activate applicability-gated-molecular-ai
+conda activate agrr-molecular-ai
 ```
 
 ### Validate the frozen package
