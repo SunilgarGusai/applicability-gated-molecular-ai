@@ -1,34 +1,58 @@
 path,role
-README.md,Repository overview and reproduction entry point
-CITATION.cff,Citation metadata
-requirements.txt,Pip dependency summary
-environment.yml,Conda environment summary
-config/experiment.yaml,Frozen experiment configuration
-data/README.md,Data handling overview
-data/sources.md,Public-source retrieval and provenance
-data/checksums.csv,SHA-256 checksums of frozen source files
-data/manifests/dataset_audit.csv,Frozen dataset audit counts
-docs/REPRODUCIBILITY.md,Reproduction and validation instructions
-docs/DATA_PROVENANCE.md,Dataset provenance and redistribution notes
-docs/EXPERIMENT_PROTOCOL.md,Frozen experimental protocol
-docs/FROZEN_RESULTS.md,Frozen-output inventory
-docs/LICENSE_AND_USAGE.md,License/provenance status and usage notes
-src/data_pipeline.py,Molecular standardization feature generation and scientific-rule scores
-src/splits.py,Random scaffold and Butina split construction
-src/classical_models.py,Classical descriptor and fingerprint baselines
-src/graph_models.py,Graph descriptor fusion and AGRR models
-src/run_experiments.py,Primary frozen-protocol experiment orchestration
-src/external_comparators.py,External B3DB transfer comparators
-src/explanation_analysis.py,Descriptor-pathway attribution-stability analysis
-src/rule_failure_diagnostics.py,Independent train-only rule-failure diagnosis
-src/generate_artifacts.py,Primary table and figure generation source
-src/generate_review_figures.py,Review/final figure generation source
-src/generate_case_figure.py,Molecular audit-case figure source
-scripts/validate_frozen_package.py,Public frozen-output integrity validator
-scripts/regenerate_manuscript_artifacts.py,Artifact-regeneration entry helper
-results/frozen/main_metrics/,Frozen main aggregate metrics
-results/frozen/uncertainty/,Frozen calibration and attribution-stability summaries
-results/frozen/ablations/,Frozen gate and no-rule sensitivity summaries
-results/frozen/external_validation/,Frozen B3DB transfer comparison
-results/frozen/statistical_outputs/,Frozen paired and independent audit summaries
-tables/,Machine-readable manuscript table sources
+".gitignore","Git ignore rules for generated, local-environment, and non-redistributed data artifacts"
+"CITATION.cff","Citation metadata for the repository and associated manuscript"
+"README.md","Repository overview, study summary, results map, and reproduction entry point"
+"REPOSITORY_MANIFEST.csv","Exhaustive file-level repository manifest"
+"config/experiment.yaml","Frozen documentary experiment configuration"
+"data/README.md","Data retrieval and local-placement instructions"
+"data/checksums.csv","SHA-256 checksums for frozen third-party source files"
+"data/manifests/dataset_audit.csv","Frozen dataset audit counts"
+"data/sources.md","Public dataset sources, citations, and provenance notes"
+"docs/DATA_PROVENANCE.md","Dataset provenance and redistribution notes"
+"docs/EXPERIMENT_PROTOCOL.md","Frozen experimental protocol and evaluation-scope documentation"
+"docs/FROZEN_RESULTS.md","Inventory and interpretation notes for frozen aggregate results"
+"docs/LICENSE_AND_USAGE.md","License, code-provenance, and third-party usage notes"
+"docs/REPRODUCIBILITY.md","Reproduction, rerun, and exact-replay scope documentation"
+"docs/assets/agrr-workflow-animated.svg","Animated high-contrast AGRR workflow graphic"
+"docs/assets/agrr-workflow.svg","Static high-contrast AGRR workflow graphic"
+"docs/assets/repository-banner.svg","README repository banner artwork"
+"environment.yml","Conda environment specification including the pinned B3DB dependency"
+"requirements.txt","Pinned pip dependency specification"
+"results/frozen/ablations/gate_diagnostics.csv","Frozen ablation or no-rule sensitivity output"
+"results/frozen/ablations/no_rule_sensitivity.csv","Frozen ablation or no-rule sensitivity output"
+"results/frozen/external_validation/external_b3db_results.csv","Frozen external B3DB transfer output"
+"results/frozen/main_metrics/bbbp_auroc_summary.csv","Frozen primary benchmark aggregate metric output"
+"results/frozen/main_metrics/esol_rmse_summary.csv","Frozen primary benchmark aggregate metric output"
+"results/frozen/statistical_outputs/attribution_stability_recomputation.csv","Frozen statistical comparison or audit output"
+"results/frozen/statistical_outputs/external_proposed_metric_recomputation.csv","Frozen statistical comparison or audit output"
+"results/frozen/statistical_outputs/failure_diagnostics_summary.csv","Frozen statistical comparison or audit output"
+"results/frozen/statistical_outputs/paired_bootstrap_recomputation.csv","Frozen statistical comparison or audit output"
+"results/frozen/statistical_outputs/paired_comparisons.csv","Frozen statistical comparison or audit output"
+"results/frozen/statistical_outputs/split_sizes.csv","Frozen statistical comparison or audit output"
+"results/frozen/uncertainty/explanation_stability.csv","Frozen uncertainty, calibration, or explanation-stability output"
+"results/frozen/uncertainty/uncertainty_summary.csv","Frozen uncertainty, calibration, or explanation-stability output"
+"scripts/regenerate_manuscript_artifacts.py","Manuscript artifact-regeneration entry helper"
+"scripts/validate_frozen_package.py","Public frozen-output integrity validator"
+"src/__init__.py","Research pipeline package marker"
+"src/classical_models.py","Classical descriptor and fingerprint baselines"
+"src/data_pipeline.py","Molecular standardization, feature generation, dataset loading, and scientific-rule scores"
+"src/explanation_analysis.py","Descriptor-pathway attribution-stability analysis"
+"src/external_comparators.py","External B3DB transfer comparators"
+"src/generate_artifacts.py","Primary manuscript table and figure generation source"
+"src/generate_case_figure.py","Molecular audit-case figure source"
+"src/generate_review_figures.py","Review/final figure generation source"
+"src/graph_models.py","Graph, descriptor-fusion, residual, gated, and AGRR model components"
+"src/metrics.py","Regression, classification, calibration, and selective-risk metrics"
+"src/rule_failure_diagnostics.py","Independent train-only rule-failure diagnosis"
+"src/run_experiments.py","Primary frozen-protocol experiment orchestration"
+"src/splits.py","Random, scaffold, and Butina split construction"
+"tables/README.md","Guide to table-ready machine-readable sources"
+"tables/bbbp_auroc_summary.csv","Machine-readable manuscript table source"
+"tables/esol_rmse_summary.csv","Machine-readable manuscript table source"
+"tables/explanation_stability.csv","Machine-readable manuscript table source"
+"tables/external_b3db_results.csv","Machine-readable manuscript table source"
+"tables/failure_diagnostics_summary.csv","Machine-readable manuscript table source"
+"tables/gate_diagnostics.csv","Machine-readable manuscript table source"
+"tables/no_rule_sensitivity.csv","Machine-readable manuscript table source"
+"tables/paired_comparisons.csv","Machine-readable manuscript table source"
+"tables/uncertainty_summary.csv","Machine-readable manuscript table source"
