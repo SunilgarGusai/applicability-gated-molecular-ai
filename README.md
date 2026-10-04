@@ -72,7 +72,7 @@ The frozen study uses five molecular data resources with distinct roles:
 | **Lipophilicity** | No-rule sensitivity task |
 | **B3DB** | External BBB transfer after exact standardized-SMILES de-overlap against BBBP |
 
-Evaluation uses **five seeds** and three split families: random, Bemis-Murcko scaffold, and Butina similarity-cluster partitions. Molecular standardization and duplicate/conflict handling occur before splitting; preprocessing and rule transformations use training data only; calibration/model selection use validation data where applicable; test and external labels are not used during fitting.
+The primary **ESOL/BBBP** benchmark uses **five frozen seeds** (`20260711`, `20260719`, `20260727`, `20260804`, `20260812`) and three split families: random, Bemis-Murcko scaffold, and Butina similarity-cluster partitions. The **FreeSolv/Lipophilicity** no-rule sensitivity analysis uses the first three frozen seeds and random/scaffold splits only. **B3DB** is a separate external-transfer evaluation after exact standardized-SMILES de-overlap against BBBP. Molecular standardization and duplicate/conflict handling occur before splitting; preprocessing and rule transformations use training data only; calibration/model selection use validation data where applicable; test and external labels are not used during fitting.
 
 See [`docs/EXPERIMENT_PROTOCOL.md`](docs/EXPERIMENT_PROTOCOL.md) for the complete frozen protocol.
 
