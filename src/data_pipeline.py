@@ -124,8 +124,16 @@ def load_raw(root: Path) -> dict[str, tuple[pd.DataFrame, str]]:
         ext = B3DB_DATA_DICT["B3DB_classification"].copy()
         labels = ext["BBB+/BBB-"].astype(str).str.strip().map({"BBB+": 1, "BBB-": 0, "+": 1, "-": 0})
         out["B3DB_external"] = (pd.DataFrame({"source_id": ext["NO."].astype(str), "smiles": ext["SMILES"].astype(str), "target": labels}), "classification")
-    except Exception:
-        pass
+    except ImportError as exc:
+        raise ImportError(
+            "B3DB external-transfer data could not be loaded because the qc-B3DB dependency is unavailable. "
+            "Install the frozen environment (environment.yml) or qc-B3DB==1.1.1."
+        ) from exc
+    except Exception as exc:
+        raise RuntimeError(
+            "B3DB external-transfer data could not be loaded with the expected qc-B3DB==1.1.1 schema. "
+            "Check the installed package version and data interface before continuing."
+        ) from exc
     return out
 
 def process_all(root: Path, n_bits: int = 1024) -> list[Audit]:
