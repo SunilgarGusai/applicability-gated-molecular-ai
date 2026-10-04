@@ -17,3 +17,5 @@ dependencies:
   - xgboost=3.1
   - pyyaml
   - pip
+  - pip:
+      - qc-B3DB==1.1.1
