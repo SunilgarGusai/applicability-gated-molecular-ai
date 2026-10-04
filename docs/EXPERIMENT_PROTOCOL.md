@@ -22,7 +22,9 @@ Primary internal evaluation uses:
 - random splits;
 - Bemis-Murcko scaffold splits;
 - Butina similarity-cluster splits;
-- five frozen seeds: 11, 29, 47, 83, 131.
+- five frozen seeds: 20260711, 20260719, 20260727, 20260804, 20260812.
+
+The primary ESOL/BBBP benchmark uses all five seeds and all three split families. The FreeSolv/Lipophilicity no-rule sensitivity analysis uses the first three frozen seeds and random/scaffold splits only. B3DB is evaluated as a separate external transfer experiment after exact standardized-SMILES de-overlap against BBBP.
 
 ## Leakage controls
 
