@@ -4,9 +4,9 @@ The files under `results/frozen/` are aggregate machine-readable outputs copied 
 
 ## Main metrics
 
-`main_metrics/metrics.csv` contains the primary dataset/split/model/seed metric table. The authoritative package audit records **360 rows** and confirms recomputation agreement against the frozen prediction records to within approximately `1.82e-7`.
+The public `main_metrics/` directory contains the dataset-specific aggregate CSV summaries `esol_rmse_summary.csv` and `bbbp_auroc_summary.csv`. These are the public machine-readable sources used for the repository's primary-result summary tables.
 
-Dataset-specific JSON summaries for ESOL and BBBP are included alongside the main metric table.
+The author-side authoritative frozen archive additionally contains the seed-level primary dataset/split/model metric table. The package audit records **360 rows** in that author-side table and confirms recomputation agreement against the frozen prediction records to within approximately `1.82e-7`. That row-level/seed-level table is not claimed as a public repository file here.
 
 ## Uncertainty and calibration
 
