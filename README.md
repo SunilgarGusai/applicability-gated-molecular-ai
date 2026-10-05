@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="docs/FROZEN_RESULTS.md"><img src="https://img.shields.io/badge/reproducibility-frozen%20outputs-2ea44f.svg" alt="Frozen outputs"/></a>
+  <a href="https://github.com/SunilgarGusai/applicability-gated-molecular-ai/actions/workflows/validate-frozen-package.yml"><img src="https://github.com/SunilgarGusai/applicability-gated-molecular-ai/actions/workflows/validate-frozen-package.yml/badge.svg" alt="Frozen package validation"/></a>
   <a href="environment.yml"><img src="https://img.shields.io/badge/Python-3.13-3776AB.svg?logo=python&logoColor=white" alt="Python 3.13"/></a>
   <a href="data/sources.md"><img src="https://img.shields.io/badge/data-public%20sources%20%2B%20checksums-5b8c85.svg" alt="Data provenance"/></a>
   <a href="CITATION.cff"><img src="https://img.shields.io/badge/citation-CITATION.cff-blue.svg" alt="Citation metadata"/></a>
