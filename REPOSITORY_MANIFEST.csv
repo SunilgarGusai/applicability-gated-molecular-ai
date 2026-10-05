@@ -1,4 +1,5 @@
 path,role
+".github/workflows/validate-frozen-package.yml","GitHub Actions integrity check for the public frozen aggregate package"
 ".gitignore","Git ignore rules for generated, local-environment, and non-redistributed data artifacts"
 "CITATION.cff","Citation metadata for the repository and associated manuscript"
 "README.md","Repository overview, study summary, results map, and reproduction entry point"
