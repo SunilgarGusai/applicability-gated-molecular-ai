@@ -27,7 +27,7 @@ When the exact historical source snapshot remains accessible, compare SHA-256 va
 
 ## 3. Inspect the frozen protocol
 
-Read [`EXPERIMENT_PROTOCOL.md`](EXPERIMENT_PROTOCOL.md) and [`../config/experiment.yaml`](../config/experiment.yaml). The source modules under `../src/` implement molecular standardization and features, random/scaffold/Butina splits, scientific-rule handling, classical and graph models, AGRR, calibration/uncertainty, external transfer, attribution stability and independent rule-failure diagnosis.
+Read [`EXPERIMENT_PROTOCOL.md`](EXPERIMENT_PROTOCOL.md) and [`../config/experiment.yaml`](../config/experiment.yaml). The YAML file is a machine-readable record of the frozen settings. The historical execution modules also encode some of those settings directly, so the YAML should not be interpreted as the sole runtime control surface. The public validator checks the frozen configuration/coverage against the exposed aggregate evidence. The source modules under `../src/` implement molecular standardization and features, random/scaffold/Butina splits, scientific-rule handling, classical and graph models, AGRR, calibration/uncertainty, external transfer, attribution stability and independent rule-failure diagnosis.
 
 ## 4. Validate the publicly exposed frozen outputs
 
