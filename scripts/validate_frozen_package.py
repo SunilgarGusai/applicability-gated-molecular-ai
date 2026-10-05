@@ -1,6 +1,7 @@
 from pathlib import Path
 import math
 import pandas as pd
+import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SEEDS = {20260711, 20260719, 20260727, 20260804, 20260812}
@@ -13,6 +14,27 @@ ext = pd.read_csv(ROOT / "results/frozen/external_validation/external_b3db_resul
 fail = pd.read_csv(ROOT / "results/frozen/statistical_outputs/failure_diagnostics_summary.csv")
 unc = pd.read_csv(ROOT / "results/frozen/uncertainty/explanation_stability.csv")
 paired = pd.read_csv(ROOT / "results/frozen/statistical_outputs/paired_comparisons.csv")
+
+with open(ROOT / "config/experiment.yaml", encoding="utf-8") as fh:
+    config = yaml.safe_load(fh)
+assert set(map(int, config["seeds"])) == SEEDS
+assert set(config["splits"]) == SPLITS
+assert config["primary_datasets"] == ["ESOL", "BBBP"]
+assert config["sensitivity_datasets"] == ["FreeSolv", "Lipophilicity"]
+assert config["external_dataset"] == "B3DB_external"
+
+manifest = pd.read_csv(ROOT / "REPOSITORY_MANIFEST.csv")
+manifest_paths = set(manifest["path"].astype(str))
+actual_paths = {
+    p.relative_to(ROOT).as_posix()
+    for p in ROOT.rglob("*")
+    if p.is_file() and ".git" not in p.parts
+}
+assert manifest_paths == actual_paths, (
+    "REPOSITORY_MANIFEST.csv is out of sync. "
+    f"Missing from manifest: {sorted(actual_paths - manifest_paths)}; "
+    f"missing from tree: {sorted(manifest_paths - actual_paths)}"
+)
 
 for df in (esol, bbbp):
     assert set(df["split"]) == SPLITS
@@ -39,6 +61,7 @@ assert len(unc) == 2 and set(unc.dataset) == {"ESOL", "BBBP"}
 assert len(paired) == 6
 
 print("Frozen public aggregate package: PASS")
+print("Repository manifest/config consistency: PASS")
 print("Seeds:", ", ".join(map(str, sorted(SEEDS))))
 print("ESOL scaffold AGRR RMSE: %.6f +/- %.6f" % (esol_scaf['mean'], esol_scaf['std']))
 print("B3DB de-overlapped n:", int(agrr_ext.n_external))
