@@ -11,6 +11,17 @@ authors:
   - family-names: Kaneria
     given-names: Vinodray J.
 repository-code: "https://github.com/SunilgarGusai/applicability-gated-molecular-ai"
+abstract: "Public reproducibility materials for applicability-gated rule-residual molecular property prediction under chemical-space shift, with explicit rule-failure modelling, negative controls, uncertainty analysis, and external-transfer evaluation."
+keywords:
+  - molecular machine learning
+  - QSAR
+  - cheminformatics
+  - applicability domain
+  - chemical-space shift
+  - scientific rules
+  - uncertainty quantification
+  - RDKit
+  - reproducible research
 preferred-citation:
   type: article
   title: "Learning When to Trust Fallible Scientific Rules: Applicability-Gated Molecular Property Prediction under Chemical-Space Shift"
