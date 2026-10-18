@@ -57,3 +57,5 @@ path,role
 "tables/no_rule_sensitivity.csv","Machine-readable manuscript table source"
 "tables/paired_comparisons.csv","Machine-readable manuscript table source"
 "tables/uncertainty_summary.csv","Machine-readable manuscript table source"
+.github/workflows/render-repository-banner.yml,Reproducible export of animated repository artwork
+docs/assets/repository-banner.gif,Animated visual cover generated from SVG master
