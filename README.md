@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/repository-banner.svg" alt="Applicability-Gated Molecular AI" width="100%" />
+  <img src="docs/assets/repository-banner.gif" alt="Applicability-Gated Molecular AI" width="100%" />
 </p>
 
 <h1 align="center">Applicability-Gated Molecular AI</h1>
